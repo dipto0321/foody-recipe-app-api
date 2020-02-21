@@ -2,6 +2,7 @@
 ![Version](https://img.shields.io/badge/version-0.1-blue.svg?cacheSeconds=2592000)
 ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/dipto0321/foody-recipe-app-api)
 ![Docker Build Status](https://img.shields.io/docker/build/dipto0321/foody-recipe-app-api)
+[![Build Status](https://travis-ci.org/dipto0321/foody-recipe-app-api.svg?branch=master)](https://travis-ci.org/dipto0321/foody-recipe-app-api)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Twitter: Diptokmk47](https://img.shields.io/twitter/follow/Diptokmk47.svg?style=social)](https://twitter.com/Diptokmk47)
