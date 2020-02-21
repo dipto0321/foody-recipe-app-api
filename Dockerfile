@@ -3,7 +3,7 @@ LABEL maintainer="Dipto Karmakar"
 ENV PYTHONUNBUFFERED 1 
 RUN pip install pipenv
 COPY Pipfile* /
-RUN pipenv lock --requirements > requirements.txt
+RUN pipenv lock --requirements --dev > requirements.txt
 RUN pip install -r /requirements.txt
 
 RUN mkdir /src
