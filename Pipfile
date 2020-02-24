@@ -11,6 +11,7 @@ autopep8 = "*"
 django = "*"
 djangorestframework = "*"
 djangorestframework-simplejwt = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.7"
