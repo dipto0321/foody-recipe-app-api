@@ -71,7 +71,7 @@ class PublicUserAPITests(TestCase):
             "password": "john1234"
         }
         res = self.client.post(CREATE_TOKEN_URL, payload_login)
-        self.assertIn('token', res.data)
+        self.assertIn('access', res.data)
         self.assertEqual(res.status_code, status.HTTP_200_OK)
 
     def test_create_token_invalid_credential(self):
@@ -88,8 +88,8 @@ class PublicUserAPITests(TestCase):
         }
 
         res = self.client.post(CREATE_TOKEN_URL, payload_login)
-        self.assertNotIn('token', res.data)
-        self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertNotIn('access', res.data)
+        self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_create_token_no_user(self):
         """Test that token is not created if user doesn't exist"""
@@ -99,14 +99,14 @@ class PublicUserAPITests(TestCase):
         }
 
         res = self.client.post(CREATE_TOKEN_URL, payload)
-        self.assertNotIn('token', res.data)
-        self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertNotIn('access', res.data)
+        self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_create_token_missing_fields(self):
         """Test that email and password are required"""
         res = self.client.post(
             CREATE_TOKEN_URL, {'email': 'test', 'password': ''})
-        self.assertNotIn('token', res.data)
+        self.assertNotIn('access', res.data)
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_retrive_user_unauthorized(self):
