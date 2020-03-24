@@ -1,6 +1,7 @@
 from rest_framework import generics, permissions
 from rest_framework_simplejwt import authentication
 from rest_framework_simplejwt.views import TokenViewBase
+
 from user import serializers
 
 
