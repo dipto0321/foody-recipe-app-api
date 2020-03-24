@@ -1,10 +1,11 @@
-from core.models import Tag
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
-from recipe.serializers import TagSerializer
 from rest_framework import status
 from rest_framework.test import APIClient
+
+from core.models import Tag
+from recipe.serializers import TagSerializer
 
 TAGS_URL = reverse('recipe:tag-list')
 
@@ -25,7 +26,7 @@ class PrivateTagsApiTests(TestCase):
     """Test authorized user tag api"""
 
     def setUp(self):
-        user = get_user_model().objects.create_user(
+        self.user = get_user_model().objects.create_user(
             'Test User', 'test@domain.com', 'testpassword')
         self.client = APIClient()
         self.client.force_authenticate(self.user)
