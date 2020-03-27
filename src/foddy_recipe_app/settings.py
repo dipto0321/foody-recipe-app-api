@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     # 'rest_framework.authtoken',
+    'drf_yasg',
     'core',
     'user',
     'recipe',
@@ -118,6 +119,8 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'core.User'
 
+REST_FRAMEWORK = {}
+
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
@@ -142,4 +145,14 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
+}
+
+# Swagger Settings
+SWAGGER_SETTINGS = {
+    "SHOW_REQUEST_HEADERS": True,
+    "USE_SESSION_AUTH": False,
+    "DOC_EXPANSION": "list",
+    "SECURITY_DEFINITIONS": {
+        "api_key": {"type": "apiKey", "in": "header", "name": "Authorization"}
+    },
 }

@@ -12,6 +12,7 @@ django = "*"
 djangorestframework = "*"
 djangorestframework-simplejwt = "*"
 psycopg2 = "*"
+drf-yasg = "*"
 
 [requires]
 python_version = "3.7"
