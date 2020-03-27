@@ -1,4 +1,4 @@
-from core.models import Tag, Ingredient
+from core.models import Ingredient, Tag
 from rest_framework import serializers
 
 
