@@ -5,10 +5,14 @@ verify_ssl = true
 
 [dev-packages]
 flake8 = "*"
+autopep8 = "*"
 
 [packages]
 django = "*"
 djangorestframework = "*"
+djangorestframework-simplejwt = "*"
+psycopg2 = "*"
+drf-yasg = "*"
 
 [requires]
 python_version = "3.7"
