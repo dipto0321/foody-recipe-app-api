@@ -2,7 +2,7 @@ from rest_framework import mixins, viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
-from core.models import Ingredient, Tag
+from core.models import Ingredient, Tag, Recipe
 from recipe import serializers
 
 
@@ -32,3 +32,15 @@ class IngredientViewset(BaseRecipeAttrViewset):
     """Manage ingredients in the database"""
     queryset = Ingredient.objects.all()
     serializer_class = serializers.IngredientSerializer
+
+
+class RecipeViewset(viewsets.ModelViewSet):
+    """Manage recipes in the database"""
+    serializer_class = serializers.RecipeSerializer
+    queryset = Recipe.objects.all()
+    authentication_classes = (JWTAuthentication,)
+    permission_classes = (IsAuthenticated,)
+
+    def get_queryset(self):
+        """Retrive the recipes for authenticated user"""
+        return self.queryset.filter(user=self.request.user)
