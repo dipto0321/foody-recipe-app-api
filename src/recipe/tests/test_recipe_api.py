@@ -23,7 +23,7 @@ def sample_tag(user, name='Main course'):
 
 def sample_ingredient(user, name='Cinnamon'):
     """Create sample ingredient"""
-    return Ingredient.object.create(user=user, name=name)
+    return Ingredient.objects.create(user=user, name=name)
 
 
 def sample_recipe(user, **params):
