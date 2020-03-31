@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3d7a5198d6097db2f7c662306a86ffa024ee566b3f1bfc4d29341d7d0342548e"
+            "sha256": "89ca4de1b1fad2d9165179f61075873f4340a16019bdb836d4e69e1c3f160e0d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -83,6 +83,14 @@
             "index": "pypi",
             "version": "==1.17.1"
         },
+        "environs": {
+            "hashes": [
+                "sha256:68d53c4bb283d8008865815226afba83ab2ea09898e564f3399c9e73b3d4bcfd",
+                "sha256:9502d78a3b7ea23c211c3a88f4f946d188a7d936c59c3609f9303aeb26cdc58d"
+            ],
+            "index": "pypi",
+            "version": "==7.3.1"
+        },
         "idna": {
             "hashes": [
                 "sha256:7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb",
@@ -147,6 +155,13 @@
             ],
             "version": "==1.1.1"
         },
+        "marshmallow": {
+            "hashes": [
+                "sha256:90854221bbb1498d003a0c3cc9d8390259137551917961c8b5258c64026b2f85",
+                "sha256:ac2e13b30165501b7d41fc0371b8df35944f5849769d136f20e2c5f6cdc6e665"
+            ],
+            "version": "==3.5.1"
+        },
         "packaging": {
             "hashes": [
                 "sha256:3c292b474fda1671ec57d46d739d072bfd495a4f51ad01a055121d81e952b7a3",
@@ -186,6 +201,13 @@
                 "sha256:c342dccb5250c08d45fd6f8b4a559613ca603b57498511740e65cd11a2e7dcec"
             ],
             "version": "==2.4.6"
+        },
+        "python-dotenv": {
+            "hashes": [
+                "sha256:81822227f771e0cab235a2939f0f265954ac4763cafd806d845801c863bf372f",
+                "sha256:92b3123fb2d58a284f76cc92bfe4ee6c502c32ded73e8b051c4f6afc8b6751ed"
+            ],
+            "version": "==0.12.0"
         },
         "pytz": {
             "hashes": [

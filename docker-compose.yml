@@ -17,6 +17,9 @@ services:
       - DB_NAME=app
       - DB_USER=postgres
       - DB_PASS=db123456
+      - SECRET_KEY=${SECRET_KEY}
+      - DJANGO_DEGUB=${DJANGO_DEGUB}
+      - ALLOWED_HOSTS_LIST=${ALLOWED_HOSTS_LIST}
     depends_on:
       - db
   db:
