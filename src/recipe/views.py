@@ -2,7 +2,7 @@ from rest_framework import mixins, viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
-from core.models import Ingredient, Tag, Recipe
+from core.models import Ingredient, Recipe, Tag
 from recipe import serializers
 
 
