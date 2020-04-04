@@ -1,4 +1,6 @@
 # Welcome to foody-recipe-app-api 👋
+![foody_recipe_api](banner.png)
+
 ![Version](https://img.shields.io/badge/version-0.1-blue.svg?cacheSeconds=2592000)
 ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/dipto0321/foody-recipe-app-api)
 ![Docker Build Status](https://img.shields.io/docker/build/dipto0321/foody-recipe-app-api)
@@ -9,24 +11,25 @@
 
 > It's a foddy app api containes all the food recipe data
 
-### ✨ [Demo](#)
-
 ## Install
-
-```sh
-todo
-```
+  - Install docker and docker-compose
+  - Run this comman 👇
+    ```sh
+    docker build .
+    docker-compose build
+    ```
 
 ## Usage
-
-```sh
-todo
-```
+  - First run 
+    ```sh
+    docker-compose up
+    ```
+  - Then goto `http://127.0.0.1:8000/api/doc/` for accessing API doc
 
 ## Run tests
 
 ```sh
-todo
+docker-compose run --rm app sh -c "python manage.py test && flake8"
 ```
 
 ## Author
