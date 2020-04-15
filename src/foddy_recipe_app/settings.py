@@ -1,6 +1,6 @@
 import os
 from datetime import timedelta
-
+import django_heroku
 from environs import Env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -29,16 +29,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    # 'rest_framework.authtoken',
     'drf_yasg',
+    'corsheaders',
     'core',
     'user',
     'recipe',
 ]
 
+if DEBUG:
+    INSTALLED_APPS += ["django_extensions"]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -127,6 +131,9 @@ AUTH_USER_MODEL = 'core.User'
 
 REST_FRAMEWORK = {}
 
+# CORS_ORIGIN_WHITELIST = []
+CORS_ORIGIN_ALLOW_ALL = True
+
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
@@ -162,3 +169,6 @@ SWAGGER_SETTINGS = {
         "api_key": {"type": "apiKey", "in": "header", "name": "Authorization"}
     },
 }
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
