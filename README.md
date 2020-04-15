@@ -20,11 +20,25 @@
     ```
 
 ## Usage
+  **Local**
   - First run 
     ```sh
     docker-compose up
     ```
   - Then goto `http://127.0.0.1:8000/api/doc/` for accessing API doc
+  
+  **Live**
+
+  - [Live Doc](https://foody-recipe-app-api.herokuapp.com/api/doc/)
+  - Browsable Apis
+    - [User Create](https://foody-recipe-app-api.herokuapp.com/api/user/create/)
+    - [User Login for getting token](https://foody-recipe-app-api.herokuapp.com/api/user/token/)
+    - [User Profile (Authorization required)](https://foody-recipe-app-api.herokuapp.com/api/user/me/)
+    - [Recipe View List (Authorization required)](https://foody-recipe-app-api.herokuapp.com/api/recipe/recipes/)
+    - [Tag View List (Authorization required)](https://foody-recipe-app-api.herokuapp.com/api/recipe/tags/)
+    - [Ingredients View List (Authorization required)](https://foody-recipe-app-api.herokuapp.com/api/recipe/ingredients/)
+  
+    [**Note:** Check live doc for detail information ☝️ ]
 
 ## Run tests
 
