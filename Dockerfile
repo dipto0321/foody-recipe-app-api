@@ -19,3 +19,5 @@ RUN adduser user
 RUN chown -R user:user /vol/
 RUN chmod -R 755 /vol/web
 USER user
+
+CMD gunicorn --bind 0.0.0.0:$PORT foddy_recipe_app.wsgi

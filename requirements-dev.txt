@@ -1,7 +1,10 @@
 -i https://pypi.org/simple
-autopep8==1.5
+autopep8==1.5.1
+django-extensions==2.2.9
 entrypoints==0.3
 flake8==3.7.9
 mccabe==0.6.1
 pycodestyle==2.5.0
 pyflakes==2.1.1
+six==1.14.0
+werkzeug==1.0.1
