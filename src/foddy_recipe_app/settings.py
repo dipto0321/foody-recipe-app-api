@@ -165,6 +165,6 @@ if DEV_MODE:
     INSTALLED_APPS += [
         "django_extensions",
     ]
-else:
-    # Activate Django-Heroku.
-    django_heroku.settings(locals())
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
