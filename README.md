@@ -4,6 +4,7 @@
 ![Version](https://img.shields.io/badge/version-0.1-blue.svg?cacheSeconds=2592000)
 ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/dipto0321/foody-recipe-app-api)
 ![Docker Build Status](https://img.shields.io/docker/build/dipto0321/foody-recipe-app-api)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e98f2527fd724703a0c6c8f6d6f497dd)](https://app.codacy.com/manual/dipto0321/foody-recipe-app-api?utm_source=github.com&utm_medium=referral&utm_content=dipto0321/foody-recipe-app-api&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/dipto0321/foody-recipe-app-api.svg?branch=master)](https://travis-ci.org/dipto0321/foody-recipe-app-api)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
