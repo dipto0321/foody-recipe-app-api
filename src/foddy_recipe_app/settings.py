@@ -1,7 +1,7 @@
 import os
 import sys
 from datetime import timedelta
-import dj_database_url
+import django_heroku
 from environs import Env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -47,7 +47,6 @@ if DEV_MODE:
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -167,5 +166,5 @@ SWAGGER_SETTINGS = {
 }
 
 
-# Activate Django-Heroku.
-DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+if not DEV_MODE:
+    django_heroku.settings(locals())
