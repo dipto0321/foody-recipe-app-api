@@ -8,6 +8,7 @@ flake8 = "*"
 autopep8 = "*"
 django-extensions = "*"
 werkzeug = "*"
+black = "*"
 
 [packages]
 django = "*"
@@ -24,3 +25,6 @@ whitenoise = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
