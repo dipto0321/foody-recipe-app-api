@@ -167,4 +167,5 @@ SWAGGER_SETTINGS = {
 
 
 if not DEV_MODE:
+    print("Hi")
     django_heroku.settings(locals())
