@@ -169,8 +169,8 @@ SWAGGER_SETTINGS = {
 
 if not DEV_MODE:
     django_heroku.settings(locals())
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+    STATICFILES_STORAGE = "foddy_recipe_app.storage.WhiteNoiseStaticFilesStorage"
+    # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 LOGGING = {
     "version": 1,
