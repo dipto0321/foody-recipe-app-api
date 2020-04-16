@@ -3,9 +3,12 @@
 
 ![Version](https://img.shields.io/badge/version-0.1-blue.svg?cacheSeconds=2592000)
 ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/dipto0321/foody-recipe-app-api)
-![Docker Build Status](https://img.shields.io/docker/build/dipto0321/foody-recipe-app-api)
+![GitHub Pipenv locked dependency version](https://img.shields.io/github/pipenv/locked/dependency-version/dipto0321/foody-recipe-app-api/django?style=plastic)
+![GitHub Pipenv locked dependency version](https://img.shields.io/github/pipenv/locked/dependency-version/dipto0321/foody-recipe-app-api/djangorestframework?style=plastic)
+![GitHub Pipenv locked dependency version](https://img.shields.io/github/pipenv/locked/dependency-version/dipto0321/foody-recipe-app-api/gunicorn?style=plastic)
 [![Build Status](https://travis-ci.org/dipto0321/foody-recipe-app-api.svg?branch=master)](https://travis-ci.org/dipto0321/foody-recipe-app-api)
-[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](#)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/414457f95b08424689ac40a6d651fa80)](https://www.codacy.com/manual/dipto0321/foody-recipe-app-api?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dipto0321/foody-recipe-app-api&amp;utm_campaign=Badge_Grade)
+![GitHub last commit](https://img.shields.io/github/last-commit/dipto0321/foody-recipe-app-api?style=plastic)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Twitter: Diptokmk47](https://img.shields.io/twitter/follow/Diptokmk47.svg?style=social)](https://twitter.com/Diptokmk47)
 
