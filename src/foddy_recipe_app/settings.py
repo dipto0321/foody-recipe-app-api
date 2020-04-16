@@ -47,6 +47,7 @@ if DEV_MODE:
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -168,6 +169,8 @@ SWAGGER_SETTINGS = {
 
 if not DEV_MODE:
     django_heroku.settings(locals())
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 LOGGING = {
     "version": 1,
