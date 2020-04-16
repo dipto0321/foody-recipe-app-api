@@ -1,7 +1,7 @@
 import os
 import sys
 from datetime import timedelta
-import django_heroku
+import dj_database_url
 from environs import Env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     "user",
     "recipe",
 ]
+
+if DEV_MODE:
+    INSTALLED_APPS += [
+        "django_extensions",
+    ]
 
 
 MIDDLEWARE = [
@@ -161,11 +166,6 @@ SWAGGER_SETTINGS = {
     },
 }
 
-if DEV_MODE:
-    INSTALLED_APPS += [
-        "django_extensions",
-    ]
-
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)

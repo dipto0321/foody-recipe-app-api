@@ -20,8 +20,8 @@ environs = "*"
 pillow = "*"
 gunicorn = "*"
 django-cors-headers = "*"
-django-heroku = "*"
 whitenoise = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.7"
