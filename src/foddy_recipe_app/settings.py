@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import timedelta
 import django_heroku
 from environs import Env
@@ -16,6 +17,8 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEGUB", default=False)
+TESTING_MODE = "test" in sys.argv
+DEV_MODE = DEBUG and not TESTING_MODE
 
 ALLOWED_HOSTS = ["foody-recipe-app-api.herokuapp.com"]
 
@@ -36,8 +39,6 @@ INSTALLED_APPS = [
     "recipe",
 ]
 
-if DEBUG:
-    INSTALLED_APPS.append("django_extensions")
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -160,6 +161,10 @@ SWAGGER_SETTINGS = {
     },
 }
 
-if not DEBUG:
+if DEV_MODE:
+    INSTALLED_APPS += [
+        "django_extensions",
+    ]
+else:
     # Activate Django-Heroku.
     django_heroku.settings(locals())
