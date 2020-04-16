@@ -47,7 +47,6 @@ if DEV_MODE:
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -168,9 +167,9 @@ SWAGGER_SETTINGS = {
 
 
 if not DEV_MODE:
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
     django_heroku.settings(locals())
-    STATICFILES_STORAGE = "foddy_recipe_app.storage.WhiteNoiseStaticFilesStorage"
-    # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 LOGGING = {
     "version": 1,
