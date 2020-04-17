@@ -17,8 +17,6 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
-TESTING_MODE = "test" in sys.argv
-DEV_MODE = DEBUG and not TESTING_MODE
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS_URL", default=[])
 
@@ -39,7 +37,7 @@ INSTALLED_APPS = [
     "recipe",
 ]
 
-if DEV_MODE:
+if DEBUG:
     INSTALLED_APPS += [
         "django_extensions",
     ]
@@ -168,7 +166,7 @@ SWAGGER_SETTINGS = {
     },
 }
 
-if not DEV_MODE:
+if not DEBUG:
     STATICFILES_STORAGE = (
         "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
     )
