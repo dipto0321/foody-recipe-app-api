@@ -19,6 +19,7 @@ services:
       - DB_PASS=db123456
       - SECRET_KEY=${SECRET_KEY}
       - DJANGO_DEBUG=${DJANGO_DEBUG}
+      - ALLOWED_HOSTS_URL=${ALLOWED_HOSTS_URL}
     depends_on:
       - db
   db:

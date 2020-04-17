@@ -20,7 +20,7 @@ DEBUG = env.bool("DJANGO_DEBUG", default=False)
 TESTING_MODE = "test" in sys.argv
 DEV_MODE = DEBUG and not TESTING_MODE
 
-ALLOWED_HOSTS = ["127.0.0.1"]  # foody-recipe-app-api.herokuapp.com
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS_URL", default=[])
 
 # Application definition
 
