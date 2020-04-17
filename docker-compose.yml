@@ -11,7 +11,6 @@ services:
     command: >
       sh -c "python manage.py wait_for_db &&
              python manage.py migrate &&
-             python manage.py collectstatic &&
              python manage.py runserver 0.0.0.0:8000"
     environment:
       - DB_HOST=db
@@ -19,7 +18,7 @@ services:
       - DB_USER=postgres
       - DB_PASS=db123456
       - SECRET_KEY=${SECRET_KEY}
-      - DJANGO_DEGUB=${DJANGO_DEGUB}
+      - DJANGO_DEBUG=${DJANGO_DEBUG}
     depends_on:
       - db
   db:

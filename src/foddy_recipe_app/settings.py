@@ -16,11 +16,11 @@ env.read_env()
 SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DJANGO_DEGUB", default=False)
+DEBUG = env.bool("DJANGO_DEBUG", default=False)
 TESTING_MODE = "test" in sys.argv
 DEV_MODE = DEBUG and not TESTING_MODE
 
-ALLOWED_HOSTS = ["foody-recipe-app-api.herokuapp.com"]
+ALLOWED_HOSTS = ["127.0.0.1"]  # foody-recipe-app-api.herokuapp.com
 
 # Application definition
 
@@ -121,11 +121,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
 
+
 STATIC_ROOT = "/vol/web/static"
 MEDIA_ROOT = "/vol/web/media"
+
 
 AUTH_USER_MODEL = "core.User"
 
@@ -165,17 +168,20 @@ SWAGGER_SETTINGS = {
     },
 }
 
+if not DEV_MODE:
+    STATICFILES_STORAGE = (
+        "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+    )
+    django_heroku.settings(locals())
 
-django_heroku.settings(locals())
-
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {"console": {"class": "logging.StreamHandler",},},
-    "loggers": {
-        "django": {
-            "handlers": ["console"],
-            "level": os.getenv("DJANGO_LOG_LEVEL", "DEBUG"),
+    LOGGING = {
+        "version": 1,
+        "disable_existing_loggers": False,
+        "handlers": {"console": {"class": "logging.StreamHandler",},},
+        "loggers": {
+            "django": {
+                "handlers": ["console"],
+                "level": os.getenv("DJANGO_LOG_LEVEL", "DEBUG"),
+            },
         },
-    },
-}
+    }
