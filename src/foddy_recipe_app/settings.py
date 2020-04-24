@@ -17,7 +17,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEGUB", default=False)
 
-ALLOWED_HOSTS = ["foody-recipe-app-api.herokuapp.com"]
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS_URL", default=[])
 
 # Application definition
 
