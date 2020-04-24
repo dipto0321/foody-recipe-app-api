@@ -9,6 +9,10 @@ autopep8 = "*"
 django-extensions = "*"
 werkzeug = "*"
 black = "*"
+pytest-django = "*"
+coverage = "*"
+pytest-cov = "*"
+django-coverage-plugin = "*"
 
 [packages]
 django = "*"

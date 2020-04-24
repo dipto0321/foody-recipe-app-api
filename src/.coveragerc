@@ -1,0 +1,9 @@
+[run]
+plugins =
+    django_coverage_plugin
+omit=
+    manage.py
+    foddy_recipe_app/asgi.py
+    foddy_recipe_app/settings.py
+    foddy_recipe_app/wsgi.py
+    staticfiles/drf-yasg/swagger-ui-dist/oauth2-redirect.html
