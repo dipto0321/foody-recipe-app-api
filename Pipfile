@@ -5,7 +5,6 @@ verify_ssl = true
 
 [dev-packages]
 flake8 = "*"
-autopep8 = "*"
 django-extensions = "*"
 werkzeug = "*"
 black = "*"
