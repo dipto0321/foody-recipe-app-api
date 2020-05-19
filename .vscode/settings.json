@@ -1,0 +1,4 @@
+{
+  "python.formatting.provider": "black",
+  "python.pythonPath": "/home/dipto47/.local/share/virtualenvs/foody-recipe-app-api-hLFsNzyI/bin/python"
+}
