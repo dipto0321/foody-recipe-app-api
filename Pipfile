@@ -5,10 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 flake8 = "*"
-autopep8 = "*"
 django-extensions = "*"
 werkzeug = "*"
 black = "*"
+pytest-django = "*"
+coverage = "*"
+pytest-cov = "*"
+django-coverage-plugin = "*"
 
 [packages]
 django = "*"
