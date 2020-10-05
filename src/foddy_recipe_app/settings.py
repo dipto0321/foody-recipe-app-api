@@ -1,5 +1,4 @@
 import os
-import sys
 from datetime import timedelta
 import django_heroku
 from environs import Env
@@ -30,7 +29,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "drf_yasg",
     "corsheaders",
     "core",
     "user",
@@ -38,9 +36,7 @@ INSTALLED_APPS = [
 ]
 
 if DEBUG:
-    INSTALLED_APPS += [
-        "django_extensions",
-    ]
+    INSTALLED_APPS.append("django_extensions")
 
 
 MIDDLEWARE = [
